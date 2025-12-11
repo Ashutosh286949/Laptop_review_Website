@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Laptop Review Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="submit.html">Submit Review</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Share Your Experience</h2>
+        
+        <form action="#" method="POST" class="review-form"> 
+            
+            <div class="form-group">
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" placeholder="e.g., Apple MacBook Air M3 or Logitech K380" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Product Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">-- Select Category --</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="keyboard">Keyboard</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="monitor">Monitor</option>
+                    <option value="other">Other Accessory</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Your Rating (1-5 Stars):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" value="5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="review_text">Full Review:</label>
+                <textarea id="review_text" name="review_text" rows="8" placeholder="Write your honest opinion about the product (min 50 characters)" required minlength="50"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="reviewer_name">Your Name (or Nickname):</label>
+                <input type="text" id="reviewer_name" name="reviewer_name" required>
+            </div>
+
+            <button type="submit" class="button">Submit Review</button>
+            <button type="reset" class="button" style="background-color: #f44336; margin-left: 10px;">Reset Form</button>
+
+        </form>
+        <p style="text-align: center; margin-top: 20px;">*In a live website, this form data would be processed by a backend server to save and display your review.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Laptop Review Hub</p>
+    </footer>
+</body>
+</html>

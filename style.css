@@ -1,0 +1,195 @@
+/* Basic reset to remove default browser padding/margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes managing widths and padding easier */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* --- Header & Navigation Styling --- */
+header {
+    background: #2a61a6; /* A nice blue color */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none; /* Removes the bullet points */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline; /* Makes the list items horizontal */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Removes the underline from links */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Adds underline on mouse hover */
+}
+
+/* --- Main Content Styling --- */
+main {
+    max-width: 1000px;
+    margin: 20px auto; /* Centers the content and adds top/bottom margin */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Style for the 'See All Reviews' button */
+.button {
+    display: inline-block;
+    background: #008cba; /* A bright, inviting blue */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background: #005f7c;
+}
+
+/* --- Footer Styling --- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+/* --- Form Styling (For Login and Submit Pages) --- */
+.auth-form, .review-form {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Makes the label take up its own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%; /* Makes the input fields stretch the full width of the container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for JavaScript messages */
+.message-area {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+/* --- Review Card Specific Styling --- */
+.review-list {
+    /* CSS Grid is a great, modern way to lay out content */
+    display: grid; 
+    /* Two columns that are equal width (1fr) */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; /* Space between the grid items */
+}
+
+/* For smaller screens, force reviews into a single column */
+/* This is basic responsive design */
+@media (max-width: 768px) {
+    .review-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.review-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s; /* Adds a smooth effect on hover */
+}
+
+.review-card:hover {
+    /* Lifts the card slightly when the mouse is over it */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-card h3 {
+    color: #2a61a6; /* Uses your primary blue color */
+    margin-bottom: 5px;
+}
+
+.rating {
+    color: gold; /* Makes the stars stand out */
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 5px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e6f7ff;
+    color: #1890ff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* --- Form Styling (For Login and Submit Pages) --- */
+.auth-form, .review-form {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+    /* ... (rest of the styles) ... */
+}
+/* ... (form-group, input, textarea styles) ... */
